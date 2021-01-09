@@ -1,0 +1,257 @@
+.bar{
+    width: 100%;
+    background:black;
+    height:100px;
+    color:#fff;
+    text-align: center;
+    font-family: fantasy;
+    font-size:200%;
+    margin-bottom: 25px;
+}
+.center{
+    width: 100%;
+    background:white;
+    height:700px;
+}
+
+.bar_icon{
+  cursor: pointer;
+  margin-right: 3%;
+  margin-left: 3%;
+  text-decoration:none;
+  color: white;
+}
+
+.bar_icon:hover{
+  color: purple;
+  
+}
+
+.shop_table{
+  width: 100%;
+}
+
+.rank_table{
+  width: 100%;
+}
+
+/* .table { 
+    border:1px solid #000; 
+    width:200px;
+    border:1px solid #000;
+    text-align:center;
+    border-collapse:collapse;
+    width: 100%;
+  }  */
+  /*th { 
+    font-family: fantasy;
+    background-color: black;
+    padding:160px;
+    border:1% solid white;
+    color:#fff;
+    text-align:center;
+    font-size:40px;
+    margin: 0%; 
+  } 
+  td { 
+    font-family: fantasy;
+    background-color: black;
+    padding:160px;
+    border:1px solid white;
+    color:#fff;
+    text-align:center;
+    font-size:40px; 
+    margin: 0%; 
+  } */
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: 0px;
+}
+/*.mySlides {
+  width:600px;
+     height:300px;
+     float:left; 
+}
+.mySlides>image{
+  width:100%;
+  height:100%;
+}*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top:50%;
+  width: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(148, 140, 140, 0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 30px;
+  font-family: fantasy;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 3px;
+  background-color:white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.8s ease;
+}
+
+.active, .dot:hover {
+  background-color: #333030;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+/*.set{
+  animation:playMovie 1s linear infinite;
+}*/
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/*@keyframes playMovie{
+  0% {margin-left:0px;}
+  20% {margin-left:-600px;}
+  50% {margin-left:-1200px;}
+  100% {margin-left:-2400px;}
+}*/
+.hot {
+  font-family: neon;
+  height: 600px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+.bdr {
+  width: 96vw;
+  height: 550px;
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  border: 5px #000080 solid;
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px #FF1493;
+  padding-left: -5px;
+}
+
+.pop {
+  padding-top: 20px;
+  padding-left: 60px;
+  font-size: 60px;
+  color: #FFBB00;
+  line-height: 6vw;
+  text-shadow: 0vw 0vw 3vw #FF1493;
+  animation: neon 1s ease infinite;
+}
+
+.h {
+  color: #A52A2A;
+  font-family: monospace;
+  display: inline-block;
+  font-size: 35px;
+  font-weight: bolder;
+  font-family: 'Londrina Sketch';
+  animation: hotneon 0.8s ease infinite;
+  margin-right: 13.5vw;
+  padding-left: 190px;
+  padding-top: -200px;
+  animation-duration: 1s;
+    animation-name: h;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    text-shadow: 1px 1px white, -1px -1px white,
+    1px -1px white, -1px 1px white;	
+}
+@keyframes h {
+  0% {
+      opacity: 1;
+  }
+  15%
+  {
+    opacity: 0.75;
+  }
+  25% {
+      opacity: 0.5;
+  }
+  50% {
+      opacity: 0.25;
+  }
+  65%
+  {
+    opacity: 0.5;
+  }
+  75%{
+    opacity: 0.75;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.w350 {
+  width: 100%;
+  height: 50%;
+  float: left;
+  position: absolute;
+}
+
+div {
+  display: block;
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+a:visited
+{
+  cursor: pointer;
+  margin-right: 3%;
+  margin-left: 3%;
+  text-decoration:none;
+  color: white;
+}

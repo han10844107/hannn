@@ -1,0 +1,47 @@
+#example1 {
+  background: url("Rolax/Shifty.jpg");
+  background-repeat: no-repeat;
+  background-size: 750px 350px;
+  opacity:0.5;
+}
+ #circle{
+width:350px;
+height:350px;
+background: -webkit-radial-gradient(circle,#bdc3c7,#000000);
+background: -o-radial-gradient(circle,#bdc3c7,#000000);
+background: -moz-radial-gradient(circle,#bdc3c7,#000000);
+background: radial-gradient(circle,#bdc3c7,#000000);
+}
+.mh14 {
+color: rgba(255,255,255,1);
+transition: all 0.3s;
+position: absolute;
+border: rgba(0,0,0,0.5);
+overflow: hidden;
+height:353px;
+}
+
+
+
+.mh14:after{
+transition-delay: 0.2s;
+overflow: hidden;
+}
+.test2:hover
+{
+transform:rotate(360deg);
+transition-duration:0.8s;
+}
+.test:hover{
+transform:scale(1.2);
+}
+.mh14:hover:before, .mh14:hover::after{
+transform: translate(0,0);  
+overflow: hidden;
+}
+.tee{
+  font-size:xx-large;
+  top:100px;
+  left: 300px;
+  position: absolute;
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    .switch_demo {
+    position: relative;
+    width: 100px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    }
+    .switch_demo-checkbox {
+    display: none;
+    }
+    .switch_demo-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    }
+    .switch_demo-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+    }
+    .switch_demo-inner:before,
+    .switch_demo-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    }
+    .switch_demo-inner:before {
+    content: "dark";
+    padding-left: 10px;
+    background-color: #34A7C1;
+    color: #FFFFFF;
+    }
+    .switch_demo-inner:after {
+    content: "light";
+    padding-right: 10px;
+    background-color: #EEEEEE;
+    color: #999999;
+    text-align: right;
+    }
+    .switch_demo-switch {
+    display: block;
+    width: 18px;
+    margin: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 116px;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+    }
+    .switch_demo-checkbox:checked + .switch_demo-label .switch_demo-inner {
+    margin-left: 0;
+    }
+    .switch_demo-checkbox:checked + .switch_demo-label .switch_demo-switch {
+    right: 0px;
+    }
+    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timering</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <script src="scripts/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="member.css">
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body style="background-color: black;" id="sw">
+
+</div>
+</div>
+
+
+  <div class='bar' id="sw_bar">
+  
+    <div class="switch_demo">
+      <input type="checkbox" name="switch_demo" class="switch_demo-checkbox" id="switch_demo" checked>
+      <label class="switch_demo-label" for="switch_demo" id="testing" onclick="ttt()">
+      <span class="switch_demo-inner"></span>
+      <span class="switch_demo-switch"></span>
+      </label>
+      <script>
+        function ttt(){
+        if (document.getElementById("switch_demo").checked ==true)
+        {
+          document.getElementById("sw").style="background-color:white;";
+          $('.bar').css('background-color','white');
+          $('.bar_icon').css('background','white');
+          $('.bar_icon').css('color','black');
+          $('.hot').css('background','white');
+          $('.hot').css('color','black');
+          $('.bdr').css('border','5px #FFBB00 solid');
+          $('.bdr').css('box-shadow','0px 0px 40px red');
+          $('#pop_1').css('border','4px black solid');
+          $('#pop_2').css('border','4px black solid');
+          $('#pop_3').css('border','4px black solid');
+          $('.pop').css('color','green');
+
+        }
+        else{
+          document.getElementById("sw").style="background-color:black;";
+          $('.bar').css('background-color','black');
+          $('.bar_icon').css('background','none');
+          $('.bar_icon').css('color','white');
+          $('.hot').css('background','black');
+          $('.hot').css('color','white');
+          $('.bdr').css('border','5px #000080 solid');
+          $('.bdr').css('box-shadow','0px 0px 40px #FF1493');
+          $('#pop_1').css('border','none');
+          $('#pop_2').css('border','none');
+          $('#pop_3').css('border','none');
+          $('.pop').css('color','#FFBB00');
+        }
+      }
+        </script>
+      </div>
+    <a class="bar_icon" href="about_us.html">About Us</a>
+    <a class="bar_icon" href="">Online Users:</a>
+    <a class="bar_icon" href="index.html"><img src="image/logo.png" style="width:100px;height:100px"></a>
+    <a class="bar_icon" href="">Shopping Cart</a>
+    <a id="member_login" class="bar_icon" href="index.html">Member login</a>
+    <div class="navright">
+      <div class="dropdown">
+        <button class="dropbtn">
+          <class="user">
+        </button>
+        <div id="login_list" class="dropdown-content">
+          <a href="#" onclick="document.getElementById('id01').style.display='block'">LOGIN</a>
+          <a href="#" onclick="document.getElementById('id02').style.display='block'">REGISTER</a>
+        </div>
+        <div>
+          <script>
+            const element = document.querySelector("#member_login");
+
+            element.addEventListener("mouseover", event => {
+              document.getElementById('login_list').style.display = "block";
+              
+            });
+
+            element.addEventListener("mouseout", event => {
+              setTimeout(function () {
+                document.getElementById('login_list').style.display = "none";
+              }, 3000);
+            });
+          </script>
+
+          <div id="id01" class="indexmodal" style="overflow:hidden">
+            <form class="modal-content-index animate" action="/action_page.php" method="post" style="width:35%">
+
+              <span onclick="document.getElementById('id01').style.display='none'" class="closemodal"
+                title="Close Modal">&times;</span>
+              <img src="image/logo.png" class="logomodal">
+              <div class="login">LOGIN</div>
+
+              <div class="container_modal">
+
+                <input type="text" placeholder="account number/Email" name="uname" required class="indexinput">
+
+
+                <input type="password" placeholder="password" name="psw" required class="indexinput">
+
+                <button type="submit" class="loginbut" style="margin-right:15px"
+                  onclick="document.getElementById('id02').style.display='block';document.getElementById('id01').style.display='none'">REGISTER</button>
+                <button type="submit" class="loginbut" style="background-color:black;color:white">LOGIN</button>
+              </div>
+
+            </form>
+          </div>
+
+          <div id="id02" class="indexmodal">
+            <form class="modal-content-index animate" method="post" style="width:35%;margin-top:5%">
+
+              <span onclick="document.getElementById('id02').style.display='none'" class="closemodal"
+                title="Close Modal">&times;</span>
+              <img src="image/logo.png" class="logomodal">
+              <div class="login">REGISTER</div>
+
+              <div class="container_modal">
+
+                <input type="text" placeholder="account number" name="id" required class="indexinput">
+                <input type="password" placeholder="password" name="password" required class="indexinput">
+                <input type="password" placeholder="confirm password" name="recheckpassword" required
+                  class="indexinput">
+                <input type="text" placeholder="name" name="name" required class="indexinput">
+                Gender:&nbsp;&nbsp;<input type="radio" name="sex" value="male" required>Male
+                <input type="radio" name="sex" value="female" required>Female<br>
+                &nbsp;&nbsp;Date of Birth:&nbsp;&nbsp;<input type="date" placeholder="Birthday" name="date" required>
+                <input type="text" placeholder="Email" name="email" required class="indexinput"><br>
+                <input type="text" placeholder="phone" name="tel" required class="indexinput">
+                <input type="text" placeholder="address" name="address" required class="indexinput">
+
+                <button type="submit" class="loginbut" style="background-color:black;color:white">REGISTER</button>
+              </div>
+
+            </form>
+          </div>
+
+          <div id="id03" class="indexmodal ">
+            <div class="sussce animate">
+              <img src="image/logo.png" class="duihao">
+              <div>
+                SUCCESS
+              </div>
+            </div>
+          </div>
+          <script>
+            var modal = document.getElementById('id03');
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="slideshow-container">
+        <div class="set">
+          <div class="mySlides fade">
+            <img src="image/hermes2.jpg" style="width:100%;height:700px">
+            <div class="text">HERMES</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="image/mont1.jpg" style="width:100%;height:700px">
+            <div class="text">MONT BLANCE</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="image/rolax2.jpg" style="width:100%;height:700px">
+            <div class="text">ROLAX</div>
+          </div>
+          <div class="mySlides fade">
+            <img src="image/citizen1.jpg" style="width:100%;height:700px">
+            <div class="text">CITIZEN</div>
+          </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+      <script>
+        currentSlide(1);
+        setInterval(function () {
+          plusSlides(1);
+        }, 2000);
+      </script>
+    </div>
+    <div class="sitebody">
+      <!--<table class="shop_table"> 
+               <tr> 
+                 <td><img src="image/tomont.png" style="width:160px;height:160px"></td> 
+                <td><img src="image/tophermes1.jpg" style="width:160px;height:160px"></td>
+                </tr> 
+                <tr> 
+                <td><img src="image/toprolax.jpg" style="width:160px;height:160px"></td> 
+                 <td><img src="image/tocitizen.jpg" style="width:160px;height:160px"></td> 
+                </tr> 
+            </table>-->
+      <table style="top:30px;position:relative;left:105px;">
+        <tbody>
+          <tr>
+            <td style="position:relative;right:100px;"><a href="mont.html"><img src="image/product1.jpg" style=" width:100%;height:500px"></a></td>
+            <td style="position:relative;right:50px;"><a href="hermes.html"><img src="image/product2.jpg" style="width:120%;height:500px"></a></td>
+          </tr>
+          <tr>
+            <td style="position:relative;right:80px;"><a href="rolax.html"><img src="image/product3.jpg" style="width:100%;height:500px"></a></td>
+            <td style="position:relative;right:50px;"><a href="citizen.html"><img src="image/product4.jpg" style="width:120%;height:500px"></a></td>
+          <tr>
+        </tbody>
+      </table>
+      <!-- <table class='rank_table' cellpadding="1%" >
+               <tr><td colspan="3">Watch Rankings</td></tr>
+              <tr><td><img src="image/ranking1.png" style="width:150px;height:300px"></td><td><img src="image/ranking2.jpg" style="width:150px;height:300px"></td><td><img src="image/ranking3.png" style="width:150px;height:300px"></td></tr>
+            </table>
+            <div> -->
+
+    </div>
+  </div>
+
+
+  <div class="hot" style="position:absolute;top: 1900px;">
+    <div class="bdr">
+
+      <p class="pop" style="z-index:2;">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit; position:absolute; bottom:430px;">人氣排行榜</font>
+        </font>
+      </p>
+      <div style="margin-left: auto;margin-right: auto; width: 100%;z-index:1;">
+        <p class="h">
+          <font  style=" position:absolute;bottom:380px;right:1075px;">1號</font>
+        </p>
+        <p class="h">
+          <font style="vertical-align: inherit;position:absolute;bottom:380px;right:630px;">2號</font>
+        </p>
+        <p class="h">
+          <font style="vertical-align: inherit;position:absolute;bottom:380px;right:210px;">3號</font>
+        </p>
+      </div>
+
+
+      <div style="margin-left: auto;margin-right: auto; width: 99%;">
+
+        <a href="Rolax/3.html" style="color:black">
+          <div class="w350" style="margin-left:80px ;">
+            <div>
+              <img src="Rolax/rolaximage/watch3.png"id="pop_1" style="height:100%;width:25%;position:absolute;bottom:40px;left:-40px;"
+                class="first">
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </a>
+        <a href="Citizen/5.html" style="color:black">
+          <div class="w350" style="margin-left:600px; ">
+            <div>
+              <img src="Citizen/citizenimage/watch5.png"
+               id="pop_2" style="height:100%;width:25%;position:absolute;bottom:40px;margin-left:-120px;" class="first">
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </a>
+        <a href="Mont/2.html" style="color:black">
+          <div class="w350" style="margin-left:1100px">
+            <div>
+              <img src="Mont/montimage/watch2.png"
+                id="pop_3"style="width:25%;height:100%;position:absolute;bottom:40px;margin-left:-200px;" class="first">
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

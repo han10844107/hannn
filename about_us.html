@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Timering</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<script src="scripts/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="member.css">
+	<link rel="stylesheet" type="text/css" href="about_us.css">
+	</head>
+	<body style="background-color: black;">
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	   <div class='bar'>
+		<a class="bar_icon" href="about_us.html">About Us</a>
+		<a class="bar_icon">Online Users:</a>
+		<a class="bar_icon" href="index.html"><img src="image/logo.png" style="width:100px;height:100px"></a>
+		<a class="bar_icon" href="shopping_cart.html">Shopping Cart</a>
+		<a id="member_login" class="bar_icon" href="member.html">Member login</a>
+		<div class="navright">	
+		 <div class="dropdown">
+		   <button class="dropbtn"><class="user"></button>
+		   <div id="login_list" class="dropdown-content">
+			 <a href="#" onclick="document.getElementById('id01').style.display='block'" >LOGIN</a>
+			 <a href="#" onclick="document.getElementById('id02').style.display='block'">REGISTER</a>
+	   </div>
+	   <div>
+		<script>
+		  const element = document.querySelector("#member_login");
+	
+		  element.addEventListener("mouseover", event => {
+			  document.getElementById('login_list').style.display = "block";
+		  });
+		  
+		  element.addEventListener("mouseout", event => {
+			  setTimeout(function(){document.getElementById('login_list').style.display = "none";}, 3000);
+		  });
+	 </script>
+	 
+		<div id="id01" class="indexmodal" style="overflow:hidden"> 
+		  <form class="modal-content-index animate" action="/action_page.php" method="post" style="width:35%">
+			 
+			  <span onclick="document.getElementById('id01').style.display='none'" class="closemodal" title="Close Modal">&times;</span>
+					  <img src="image/logo.png" class="logomodal">
+			  <div class="login">LOGIN</div>
+	
+			  <div class="container_modal">
+			 
+				<input type="text" placeholder="account number/Email" name="uname" required class="indexinput">
+	
+				
+				<input type="password" placeholder="password" name="psw" required class="indexinput">
+				  
+				<button type="submit" class="loginbut" style="margin-right:15px" onclick="document.getElementById('id02').style.display='block';document.getElementById('id01').style.display='none'">REGISTER</button>
+				<button type="submit" class="loginbut" style="background-color:black;color:white">LOGIN</button>
+			  </div>
+		   
+		  </form>
+		</div>
+	
+		<div id="id02" class="indexmodal"> 
+		  <form class="modal-content-index animate"  method="post" style="width:35%;margin-top:5%">
+			 
+			  <span onclick="document.getElementById('id02').style.display='none'" class="closemodal" title="Close Modal">&times;</span>
+				<img src="image/logo.png" class="logomodal">
+			  <div class="login">REGISTER</div>
+	
+			  <div class="container_modal">
+			 
+				<input type="text" placeholder="account number" name="id" required class="indexinput">
+				<input type="password" placeholder="password" name="password" required class="indexinput">
+			  <input type="password" placeholder="confirm password" name="recheckpassword" required class="indexinput">
+						<input type="text" placeholder="name" name="name" required class="indexinput">
+						Gender:&nbsp;&nbsp;<input type="radio" name="sex" value="male" required>Male
+			  <input type="radio" name="sex" value="female" required>Female<br>
+			  &nbsp;&nbsp;Date of Birth:&nbsp;&nbsp;<input type="date" placeholder="Birthday" name="date" required>
+			  <input type="text" placeholder="Email" name="email" required class="indexinput"><br>
+			  <input type="text" placeholder="phone" name="tel" required class="indexinput">
+			  <input type="text" placeholder="address" name="address" required class="indexinput">
+						
+				<button type="submit" class="loginbut" style="background-color:black;color:white">REGISTER</button>
+			</div>
+		   
+		  </form>
+		</div>
+	
+		<div id="id03" class="indexmodal "> 
+		  <div class="sussce animate">				
+			<img src="image/logo.png" class="duihao">	
+			<div>
+			  SUCCESS
+			</div>
+		  </div>
+		</div>	
+	  <script>
+		
+		var modal = document.getElementById('id03');
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			modal.style.display = "none";
+		  }
+		  }
+	  </script>
+	   </div>
+		 </div>
+		</div>
+    <div>
+		<table class="title">
+			<p>Timering</p>
+		<p>～讓我們一起把時間停留在最美好的時刻～</p>
+		<p>～希望每位顧客能夠珍惜時光把握當下～</p>
+		</table>
+		<table class="ab1"  style="width:100%;height:400 dpx" padding-top: 50px;>
+			<tr>
+				<td class="ab1">
+					<div class="ab2">
+						<h3 class="ab3">Name: 張凱涵</h3>
+						<h4>Be responsible for: 前端</h4>
+						<a href="https://www.facebook.com/profile.php?id=100004585236603" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/facebook.png"></a>
+							<a href="https://www.instagram.com/han___ann/" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;"src="image/instagram.png"></a>
+							<a href="http://line.naver.jp/ti/p/sLBX9RaxgO" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/line .png"></a>
+							<a href="mailto:s963713015@gmail.com" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/email .png"></a>
+					</div>
+				</td>
+				<td class="ab_in">
+						<div class="ab2">
+							<img class="member_img" src="photo/member1.png" style="width:400px;height:400px">
+						</div>
+					</a>
+				</td>
+			</tr>
+			<tr class="ad_in">
+				<td class="ab2">
+					<img class="talentImg" src="photo/member2.png" style="width:400px;height:400px">
+					</a>
+				</td>
+				<td class="ab1">
+					<div class="ab2">
+						<h3 class="ab3">Name: 方怡晴</h3>
+						<h4>Be responsible for: 前端</h4>
+						<a href="https://www.facebook.com/feng.zi.737" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/facebook.png"></a>
+							<a href="https://www.instagram.com/fx657vac/" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;"src="image/instagram.png"></a>
+							<a href="http://line.naver.jp/ti/p/u4q1_6fjxD" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/line .png"></a>
+							<a href="mailto:fx657vac@gmail.com" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/email .png"></a>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="ab1">
+					<div class="ab2">
+						<h3 class="ab3">Name: 許禮泉</h3>
+						<h4>Be responsible for: 後端</h4>
+						<a href="https://www.facebook.com/profile.php?id=100036671690992" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/facebook.png"></a>
+							<a href="https://www.instagram.com/liquan127/" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;"src="image/instagram.png"></a>
+							<a href=" https://line.me/ti/p/-jrXDfZzEi" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/line .png"></a>
+							<a href="mailto:abc83202@gmail.com" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/email .png"></a>
+					</div>
+				</td>
+				<td class="ab_in">
+						<div class="ab2">
+							<img class="member_img" src="photo/member3.png" style="width:400px;height:400px">
+						</div>
+					</a>
+				</td>
+			</tr>
+			<tr class="ad_in">
+				<td class="ab2">
+					<img class="talentImg" src="photo/member4.png" style="width:400px;height:400px">
+					</a>
+				</td>
+				<td class="ab1">
+					<div class="ab2">
+						<h3 class="ab3">Name: 周金堅</h3>
+						<h4>Be responsible for: 後端</h4>
+						<a href="https://www.facebook.com/zhou.zic" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/facebook.png"></a>
+							<a href="https://www.instagram.com/zikiezhou?utm_source=qr" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;"src="image/instagram.png"></a>
+							<a href="https://line.me/ti/p/csqZPBcFA0" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/line .png"></a>
+							<a href="mailto:a824356777@gmail.com" target="_blank"><img class="AMIcon" style="height: 100px;width:100px;" src="image/email .png"></a>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<footer>
+		<p id="copyright">Copyright © 2020 By Timering<br> Welcome To You </p>
+	</footer>
+</body>
+</html>
